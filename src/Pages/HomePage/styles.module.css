@@ -40,7 +40,10 @@
     font-weight: 500;
 }
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 760px) {
+    .content {
+        background-position: center;
+    }
     .title {
         font-size: 40px;
     }

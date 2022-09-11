@@ -23,6 +23,7 @@
     font-size: 37px;
     font-weight: 600;
     position: relative;
+    margin-bottom: 100px;
 }
 
 .sectionTitle:after {
@@ -38,12 +39,15 @@
 section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 95vh;
-    padding: 60px 40px 40px 40px;
+    padding: 60px;
 }
+
 section:nth-child(1n) {
     background-color: var(--primaryLight);
 }
+
 section:nth-child(2n) {
     background-color: var(--primary);
 }
@@ -51,4 +55,19 @@ section:nth-child(2n) {
 .accentColor {
     color: var(--primaryLightest);
     padding: 0 10px;
+}
+
+@media all and (max-width: 760px) {
+    .siteWrapper {
+        flex-direction: column;
+        max-height: initial;
+    }
+
+    .sectionsContainer {
+        overflow: initial;
+    }
+
+    section {
+        padding: 40px 20px 20px 20px;
+    }
 }

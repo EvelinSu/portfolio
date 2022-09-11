@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from "./styles.module.css"
+import ArrowUpIcon from "../../assets/icons/ArrowUpIcon";
+import {SECTIONS} from "../../App";
 
 type TSidebarProps = {
     sections: Array<string>
@@ -7,15 +9,20 @@ type TSidebarProps = {
 
 const Sidebar: React.FC<TSidebarProps> = (props) => {
 
-    const mappedList = props.sections.map(el => {
-        return (
-            <li className={s.link}>
-                <a href={`#${el}`}>
-                    {el}
-                </a>
-            </li>
-        )
-    })
+    const [isOpen, setIsOpen] = useState(true)
+
+    const mappedList = props.sections.map(el => (
+        <li className={s.link}>
+            <a href={`#${el}`}>
+                {el}
+            </a>
+        </li>
+    ))
+
+    const onClickHandler = () => {
+        window.scrollTo(0, 0)
+        setIsOpen(!isOpen)
+    }
 
     return (
         <div className={s.sidebar}>
@@ -35,6 +42,13 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
             <div className={s.sidebarFooter}>
                 social media will be here
             </div>
+            <a
+                href={!isOpen ? `#${SECTIONS[0]}` : '#'}
+                onClick={onClickHandler}
+                className={isOpen ? s.icon : `${s.icon} ${s.iconHidden}`}
+            >
+                <ArrowUpIcon />
+            </a>
         </div>
     );
 };

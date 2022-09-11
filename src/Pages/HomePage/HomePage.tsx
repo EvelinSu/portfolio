@@ -23,7 +23,7 @@ const HomePage: React.FC<TPageProps> = (props) => {
                         based in Sochi, Russia.
                     </h2>
                     <Button
-                        href={`#${SECTIONS[4]}`}
+                        href={`#${SECTIONS[3]}`}
                         margin={"40px 0 0 0"}
                         label={"Get in touch"}
                     />
