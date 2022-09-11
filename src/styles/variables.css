@@ -1,0 +1,9 @@
+:root {
+    --textOnPrimary: #fff;
+    --primaryDarker: #1f2841;
+    --primaryDark: #273352;
+    --primary: #27334d;
+    --primaryLight: rgba(255, 255, 255, 0.1);
+    --primaryLightest: #5c86bd;
+
+}
