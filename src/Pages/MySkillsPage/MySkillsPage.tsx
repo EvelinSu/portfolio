@@ -10,8 +10,9 @@ const MySkillsPage: React.FC<TPageProps> = (props) => {
                 My Skills
             </h1>
             <div className={s.grid}>
-                {skills.map(el => (
+                {skills.map((el, i) => (
                     <SkillsBlock
+                        key={i}
                         title={el.title}
                         description={el.description}
                         icon={el.icon}
@@ -28,22 +29,22 @@ const skills = [
     {
         icon: 'https://i.imgur.com/SkXt4tI.png',
         title: "React",
-        description: "Redux, styled-components, css-modules"
+        description: "Redux, styled-components, css-modules, Girl of a sunny grace, fear the halitosis! Lord, black wind. you won't pull the fortress."
     },
 
     {
         icon: 'https://i.imgur.com/SkXt4tI.png',
         title: "JavaScript",
-        description: "Typescript"
+        description: "Typescript, Yuck, The skiff hoists with beauty, scrape the seychelles. ye mighty ale- set sails for hunger!"
     },
     {
         icon: 'https://i.imgur.com/SkXt4tI.png',
         title: "CSS",
-        description: "SASS, BEM"
+        description: "SASS, BEM, Seashells are the clouds of the wet love. Where is the fine mate? never burn a codfish. Love is an evil reef."
     },
     {
         icon: 'https://i.imgur.com/SkXt4tI.png',
         title: "HTML",
-        description: "Trade me tobacco, ye undead landlubber! The mate grows"
+        description: "The cannibal pulls with life, break the pacific ocean before it whines. Trade me tobacco, ye undead landlubber! The mate grows"
     },
 ]

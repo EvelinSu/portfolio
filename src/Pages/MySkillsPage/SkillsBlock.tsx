@@ -9,7 +9,7 @@ type TSkillsBlockProps = {
 
 const SkillsBlock: React.FC<TSkillsBlockProps> = (props) => {
     return (
-        <div className={s.skillsBlock}>
+        <div className={s.gridBlock}>
             <div className={s.header}>
                 <img className={s.icon} src={props.icon} alt={props.title}/>
                 <h1 className={s.title}>
