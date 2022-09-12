@@ -11,8 +11,8 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
 
     const [isOpen, setIsOpen] = useState(true)
 
-    const mappedList = props.sections.map(el => (
-        <li className={s.link}>
+    const mappedList = props.sections.map((el, i) => (
+        <li key={i} className={s.link}>
             <a href={`#${el}`}>
                 {el}
             </a>
@@ -45,7 +45,7 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
             <a
                 href={!isOpen ? `#${SECTIONS[0]}` : '#'}
                 onClick={onClickHandler}
-                className={isOpen ? s.icon : `${s.icon} ${s.iconHidden}`}
+                className={s.icon}
             >
                 <ArrowUpIcon />
             </a>

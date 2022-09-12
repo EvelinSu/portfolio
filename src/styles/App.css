@@ -42,6 +42,8 @@ section {
     align-items: center;
     min-height: 95vh;
     padding: 60px;
+    overflow: hidden;
+
 }
 
 section:nth-child(1n) {
@@ -68,6 +70,6 @@ section:nth-child(2n) {
     }
 
     section {
-        padding: 40px 20px 20px 20px;
+        padding: 40px 20px 100px 20px;
     }
 }

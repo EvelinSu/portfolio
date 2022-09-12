@@ -9,9 +9,15 @@
     cursor: pointer;
     transition: 0.5s;
     text-decoration: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .button:hover {
     background-color: var(--primaryLightest);
     color: #fff;
     transform: scale(0.9);
+}
+
+.button .md {
+    background-color: red;
 }

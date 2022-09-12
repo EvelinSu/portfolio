@@ -6,6 +6,8 @@ type TButtonProps = {
     onClick?: () => void
     margin?: string
     href?: string
+    target?: string
+    className?: string
 }
 
 const Button = (props: TButtonProps) => {
@@ -15,16 +17,19 @@ const Button = (props: TButtonProps) => {
     }
 
     return props.href ? (
-            <a href={props.href} className={s.button} style={{margin: props.margin}}>
+            <a href={props.href} target={props.target} className={`${s.button} ${props.className}`} style={{margin: props.margin}}>
                 {props.label}
             </a>
         )
         : (
-            <button onClick={onClickButtonHandler} className={s.button} style={{margin: props.margin}}>
+            <button
+                onClick={onClickButtonHandler}
+                className={`${s.button} ${props.className}`}
+            >
                 {props.label}
             </button>
         )
-
 };
 
 export default Button;
+
