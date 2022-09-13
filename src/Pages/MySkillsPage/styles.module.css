@@ -10,7 +10,6 @@
 
 .gridBlock {
     display: flex;
-    flex-direction: column;
     border-radius: 20px;
     align-items: center;
     padding: 30px;
@@ -26,13 +25,16 @@
     border-radius: 20px;
 }
 
+.body {
+}
+
 .title {
     font-size: 20px;
     margin: 0;
 }
 
 .icon {
-    width: 90px;
+    width: 70px;
 }
 
 .description {
@@ -41,7 +43,17 @@
     justify-content: center;
     width: 100%;
     border-radius: 20px;
-    text-align: center;
     height: 100%;
     margin: 0;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    opacity: 0.4;
+    padding: 40px 0 0 0;
+    max-width: 500px;
 }
