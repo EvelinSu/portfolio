@@ -1,0 +1,42 @@
+.block {
+    background-image: url('https://i.imgur.com/tgGUO8v.png');
+    background-position: 150px center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 60px 40px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 40px 0;
+    border-top: 6px dashed rgba(255, 255, 255, 0.1);
+    border-bottom: 6px dashed rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.title:after {
+    content: none;
+}
+
+@media all and (max-width: 760px) {
+    section {
+        padding: 40px 20px 100px 20px;
+    }
+    .block {
+        background-position: center;
+    }
+}
