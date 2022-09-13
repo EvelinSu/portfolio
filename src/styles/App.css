@@ -13,6 +13,8 @@
     max-height: 100%;
     overflow: auto;
     width: 100%;
+    padding: 10px 10px 0 0;
+
 }
 
 .sectionTitle {
@@ -30,10 +32,12 @@
     content: '';
     display: block;
     width: 90px;
-    height: 3px;
+    height: 10px;
     background-color: var(--primaryLightest);
     position: absolute;
     bottom: -2px;
+    border-radius: 10px;
+    opacity: 0.5;
 }
 
 section {
@@ -59,6 +63,12 @@ section:nth-child(2n) {
     padding: 0 10px;
 }
 
+.footer {
+    padding: 10px 40px;
+    text-align: end;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 @media all and (max-width: 760px) {
     .siteWrapper {
         flex-direction: column;
@@ -67,9 +77,19 @@ section:nth-child(2n) {
 
     .sectionsContainer {
         overflow: initial;
+        padding-left: 10px;
     }
 
     section {
         padding: 40px 20px 100px 20px;
+    }
+    .footer {
+        padding: 15px 20px ;
+    }
+}
+
+@media all and (max-width: 460px) {
+    .sectionsContainer{
+       padding: 0;
     }
 }

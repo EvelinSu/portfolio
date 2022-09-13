@@ -63,7 +63,7 @@
 
 .icon {
     display: none;
-    margin-top: 30px;
+    margin-top: 40px;
     justify-content: center;
     transition: 0.2s;
     background-color: var(--primaryDarker);

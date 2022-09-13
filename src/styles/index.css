@@ -10,13 +10,13 @@ body {
     box-sizing: border-box;
     font-size: inherit;
     font-family: inherit;
+    word-wrap: break-word;
     border: none;
     outline: none;
     resize: none;
     scrollbar-width: thin;
     color: inherit;
     scroll-behavior: smooth;
-
 }
 
 ::-webkit-scrollbar-button {
@@ -55,4 +55,10 @@ button, svg, img {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+}
+
+@media all and (max-width: 760px) {
+    body{
+        font-size: 12px;
+    }
 }
