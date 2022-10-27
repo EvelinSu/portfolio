@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./styles.module.css";
+import s from "./styles.module.sass";
 import Button from "../../components/Button/Button";
 
 type TypePortfolioBlockProps = {
@@ -13,7 +13,7 @@ const PortfolioBlock: React.FC<TypePortfolioBlockProps> = (props) => {
     return (
         <div className={s.blockContainer}>
             <div className={s.body}>
-                <img className={s.image} src={props.image}/>
+                <img className={s.image} src={props.image} alt={'ava'}/>
                 <div className={s.shadow}>
                     <Button target="_blank" href={props.link} className={s.button} label={"Смотреть"}/>
                 </div>

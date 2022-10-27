@@ -1,0 +1,48 @@
+@mixin size($width, $height: $width)
+    min-width: $width
+    max-width: $width
+    min-height: $height
+    max-height: $height
+
+@mixin flex($direction, $align: initial)
+    display: flex
+    flex-direction: $direction
+    align-items: $align
+
+@mixin background-image
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+@mixin position($top, $right: initial, $bottom: initial, $left: initial)
+    position: absolute
+    top: $top
+    right: $right
+    bottom: $bottom
+    left: $left
+
+@mixin user-select
+    user-select: none
+    -ms-user-select: none
+    -moz-user-select: none
+    -webkit-user-select: none
+
+@mixin hover-border
+    border: 1px solid transparent
+    cursor: pointer
+    &:hover
+        border: 1px solid var(--emphasis-color-primary-1)
+    &.checked
+        pointer-events: none
+        border: 1px solid var(--emphasis-alpha-color-primary-1)
+
+@mixin animate($name, $time)
+    animation-name: $name
+    animation-duration: $time
+    animation-iteration-count: infinite
+
+@mixin gap($column-gap, $row-gap: $column-gap)
+    column-gap: $column-gap
+    row-gap: $row-gap
+    gap: $column-gap
+    grid-gap: $column-gap

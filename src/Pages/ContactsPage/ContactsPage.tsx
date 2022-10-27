@@ -1,6 +1,6 @@
 import React from 'react';
-import s from "./styles.module.css"
-import "../../components/Form/styles.css"
+import s from "./styles.module.sass"
+import "../../components/Form/styles.sass"
 import {TPageProps} from "../../types";
 import PhoneIcon from "../../assets/icons/PhoneIcon";
 import Form from "../../components/Form/Input/Input";
@@ -10,8 +10,8 @@ import Textarea from "../../components/Form/Textarea/Textarea";
 const ContactsPage: React.FC<TPageProps> = (props) => {
     return (
         <section className={s.content} id={props.id}>
-            <h1 className={"sectionTitle"}>
-                Contacts<div className={"decoration"}>{props.id?.toUpperCase()}</div>
+            <h1 className={"sections__title"}>
+                Contacts<div className={"sections__title-decoration"}>{props.id?.toUpperCase()}</div>
             </h1>
             <div className={s.row}>
                 <div className={s.column}>
@@ -51,16 +51,16 @@ const ContactsPage: React.FC<TPageProps> = (props) => {
                     </div>
                 </div>
                 <div className={s.column}>
-                    <form className={"formContainer"}>
-                        <div className={"formRow"}>
-                            <div className={"formColumn"}>
+                    <form className={"form__container"}>
+                        <div className={"form__row"}>
+                            <div className={"form__column"}>
                                 <Form placeholder={"Name"} />
                             </div>
-                            <div className={"formColumn"}>
+                            <div className={"form__column"}>
                                 <Form placeholder={"Email"} />
                             </div>
                         </div>
-                        <div className={"formRow"}>
+                        <div className={"form__row"}>
                             <Textarea placeholder={"Message"} />
                         </div>
                         <div className={s.center}>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import s from "./styles.module.css"
+import s from "./styles.module.sass"
 import ArrowUpIcon from "../../assets/icons/ArrowUpIcon";
 import {SECTIONS} from "../../App";
 
@@ -26,7 +26,7 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
 
     return (
         <div className={s.sidebar}>
-            <div className={s.sidebarHeader}>
+            <div className={s.sidebar__header}>
                 <img
                     className={s.avatar}
                     src={'https://i.imgur.com/wYdLUUb.png'}
@@ -34,12 +34,12 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
                 />
                 <h1>Evelina<span className={"accentColor"}>Su</span></h1>
             </div>
-            <div className={s.sidebarBody}>
+            <div className={s.sidebar__body}>
                 <ul className={s.list}>
                     {mappedList}
                 </ul>
             </div>
-            <div className={s.sidebarFooter}>
+            <div className={s.sidebar__footer}>
                 social media will be here
             </div>
             <a

@@ -1,13 +1,13 @@
 import React from "react";
 import {TPageProps} from "../../types";
-import s from "./styles.module.css"
+import s from "./styles.module.sass"
 import SkillsBlock from "./SkillsBlock";
 
 const MySkillsPage: React.FC<TPageProps> = (props) => {
     return (
         <section id={props.id}>
-            <h1 className={"sectionTitle"}>
-                My skills <div className={"decoration"}>{props.id?.toUpperCase()}</div>
+            <h1 className={"sections__title"}>
+                My skills <div className={"sections__title-decoration"}>{props.id?.toUpperCase()}</div>
             </h1>
             <div className={s.grid}>
                 {skills.map((el, i) => (

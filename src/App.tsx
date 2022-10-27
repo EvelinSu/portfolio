@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './styles/App.css';
+import './styles/App.sass';
 import HomePage from "./Pages/HomePage/HomePage";
 import MySkillsPage from "./Pages/MySkillsPage/MySkillsPage";
 import PortfolioPage from "./Pages/PortfolioPage/PortfolioPage";
@@ -14,9 +14,9 @@ function App() {
         alert('my portfolio in progress ｡ﾟ(｡ﾉωヽ｡)ﾟ｡')
     }, [])
     return (
-        <div className="siteWrapper">
+        <div className="site__wrapper">
             <Sidebar sections={SECTIONS} />
-            <div className={"sectionsContainer"}>
+            <div className={"sections__container"}>
                 <HomePage id={SECTIONS[0]} />
                 <MySkillsPage id={SECTIONS[1]} />
                 <PortfolioPage id={SECTIONS[2]} />

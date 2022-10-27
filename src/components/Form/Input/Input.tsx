@@ -1,5 +1,5 @@
 import React, {ChangeEvent, FC, useState} from 'react';
-import "../styles.css"
+import "../styles.sass"
 
 type TFormProps = {
     placeholder: string,

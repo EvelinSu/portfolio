@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./styles.module.css"
+import s from "./styles.module.sass"
 import Button from "../../components/Button/Button";
 import {TPageProps} from "../../types";
 import {SECTIONS} from "../../App";

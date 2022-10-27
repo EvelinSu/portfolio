@@ -1,0 +1,105 @@
+@import "variables.sass"
+
+.site
+    &__wrapper
+        display: flex
+        flex-direction: row
+        width: 100%
+        color: var(--textOnPrimary)
+        font-weight: 300
+        max-height: 100vh
+
+.sections
+    &__container
+        max-height: 100%
+        overflow: auto
+        width: 100%
+        padding: 10px 10px 0 0
+    &__title
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-size: 37px
+        font-weight: 600
+        margin-bottom: 100px
+        position: relative
+    &__title-decoration
+        position: absolute
+        opacity: 0.05
+        transform: scale(4)
+        user-select: none
+        -webkit-user-select: none
+        -moz-user-select: none
+        pointer-events: none
+    &:after
+        content: ''
+        display: block
+        width: 90px
+        height: 10px
+        background-color: var(--primaryLightest)
+        position: absolute
+        bottom: -2px
+        border-radius: 10px
+        opacity: 0.5
+
+section
+    display: flex
+    flex-direction: column
+    align-items: center
+    min-height: 95vh
+    padding: 60px
+    overflow: hidden
+    position: relative
+    &:nth-child(1n)
+        background-color: var(--primaryLight)
+    &:nth-child(2n)
+        background-color: var(--primary)
+
+.accentColor
+    color: var(--primaryLightest)
+    padding: 0 10px
+
+.footer
+    padding: 10px 40px
+    text-align: end
+    color: rgba(255, 255, 255, 0.3)
+
+@media all and (max-width: 1150px)
+    .sections
+        &__title-decoration
+            transform: scale(3)
+
+    section
+        min-height: auto
+
+@media all and (max-width: 950px)
+    .sections
+        &__title-decoration
+            display: none
+
+@media all and (max-width: 760px)
+    .siteWrapper
+        flex-direction: column
+        max-height: initial
+
+    .sections
+        &__container
+            overflow: initial
+            padding-left: 10px
+
+    section
+        padding: 40px 20px 100px 20px
+
+    .sections
+        &__title
+            margin: 0 0 40px 0
+            font-size: 30px
+
+    .footer
+        padding: 15px 20px
+
+@media all and (max-width: 460px)
+    .sections
+        &__container
+            padding: 0

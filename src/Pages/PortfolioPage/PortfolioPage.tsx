@@ -1,13 +1,13 @@
 import React from "react";
 import {TPageProps} from "../../types";
-import s from "./styles.module.css"
+import s from "./styles.module.sass"
 import PortfolioBlock from "./PortfolioBlock";
 
 const PortfolioPage: React.FC<TPageProps> = (props) => {
     return (
         <section className={s.content} id={props.id}>
-            <h1 className={"sectionTitle"}>
-                My works <div className={"decoration"}>{props.id?.toUpperCase()}</div>
+            <h1 className={"sections__title"}>
+                My works <div className={"sections__title-decoration"}>{props.id?.toUpperCase()}</div>
             </h1>
             <div className={s.flex}>
                 {works.map((el, i) => (
