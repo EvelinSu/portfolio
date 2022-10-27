@@ -11,7 +11,7 @@ const ContactsPage: React.FC<TPageProps> = (props) => {
     return (
         <section className={s.content} id={props.id}>
             <h1 className={"sectionTitle"}>
-                Contacts
+                Contacts<div className={"decoration"}>{props.id?.toUpperCase()}</div>
             </h1>
             <div className={s.row}>
                 <div className={s.column}>

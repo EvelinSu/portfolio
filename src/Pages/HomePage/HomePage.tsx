@@ -14,9 +14,9 @@ const HomePage: React.FC<TPageProps> = (props) => {
                         Welcome
                     </h2>
                     <h1 className={s.title}>
-                        I'm a junior
+                        I'm a
                         <span className={"accentColor"}>
-                            frontend developer
+                            Frontend developer
                         </span>
                     </h1>
                     <h2 className={s.subtitle}>

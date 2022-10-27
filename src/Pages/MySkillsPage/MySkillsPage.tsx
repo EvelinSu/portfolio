@@ -7,7 +7,7 @@ const MySkillsPage: React.FC<TPageProps> = (props) => {
     return (
         <section id={props.id}>
             <h1 className={"sectionTitle"}>
-                My Skills
+                My skills <div className={"decoration"}>{props.id?.toUpperCase()}</div>
             </h1>
             <div className={s.grid}>
                 {skills.map((el, i) => (

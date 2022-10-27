@@ -5,9 +5,9 @@ import PortfolioBlock from "./PortfolioBlock";
 
 const PortfolioPage: React.FC<TPageProps> = (props) => {
     return (
-        <section id={props.id}>
+        <section className={s.content} id={props.id}>
             <h1 className={"sectionTitle"}>
-                My works
+                My works <div className={"decoration"}>{props.id?.toUpperCase()}</div>
             </h1>
             <div className={s.flex}>
                 {works.map((el, i) => (
