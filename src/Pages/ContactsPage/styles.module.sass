@@ -11,7 +11,7 @@
 
 .grid
     display: grid
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
     gap: 30px
 
 .center
@@ -41,6 +41,9 @@
         position: absolute
         right: -35px
         top: 50px
+        @media all and (max-width: 1000px)
+            border-right: none
+
 
 .item
     @include flex(row, center)
@@ -57,7 +60,8 @@
 
 .mediaIconsList
     @include flex(row, center)
-    @include gap(20px)
+    @include gap(30px)
+    margin-top: 10px
 
 .mediaIcon
     cursor: pointer
