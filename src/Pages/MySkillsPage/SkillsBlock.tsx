@@ -19,6 +19,7 @@ const SkillsBlock: React.FC<TSkillsBlockProps> = (props) => {
     return (
         <div
             className={s.block}
+            onClick={() => setIsHovered(true)}
             onMouseOut={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
