@@ -32,22 +32,43 @@ export default MySkillsPage;
 const skills = [
     {
         icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "React | Redux",
+        title: "Redux",
+        description: "Cloudy, addled lubbers swiftly sail a undead, salty lass!"
+    },
+    {
+        icon: 'https://i.imgur.com/SkXt4tI.png',
+        title: "React",
         description: "styled-components, css-modules, Girl of a sunny grace, fear the halitosis!"
     },
     {
         icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "JS | TS",
+        title: "JS",
         description: " Yuck, The skiff hoists with beauty, scrape the seychelles. ye mighty ale- set sails for hunger!"
     },
     {
         icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "CSS | SASS",
+        title: "TS",
+        description: " Avast, yer not hailing me without a greed! The sun waves booty like a jolly cloud!"
+    },
+    {
+        icon: 'https://i.imgur.com/SkXt4tI.png',
+        title: "Axios",
+        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+    },
+    {
+        icon: 'https://i.imgur.com/SkXt4tI.png',
+        title: "SASS",
         description: "flex-box, grid, BEM, variables, mixins, Seashells are the clouds of the wet love"
     },
     {
         icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "HTML",
-        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+        title: "styled components",
+        description: "The anchor burns with riddle, pull the captain's quarters until it waves. "
     },
+    {
+        icon: 'https://i.imgur.com/SkXt4tI.png',
+        title: "CSS modules",
+        description: "flex-box, grid, BEM, variables, mixins, Seashells are the clouds of the wet love"
+    },
+
 ]
