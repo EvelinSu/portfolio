@@ -51,6 +51,7 @@ section
     padding: 60px
     overflow: hidden
     position: relative
+    z-index: 0
     &:nth-child(1n)
         background-color: var(--primaryLight)
     &:nth-child(2n)
@@ -69,7 +70,6 @@ section
     .sections
         &__title-decoration
             transform: scale(3)
-
     section
         min-height: auto
 
@@ -79,23 +79,20 @@ section
             display: none
 
 @media all and (max-width: 760px)
-    .siteWrapper
-        flex-direction: column
-        max-height: initial
-
+    .site
+        &__wrapper
+            flex-direction: column
+            max-height: initial
     .sections
         &__container
             overflow: initial
             padding-left: 10px
-
     section
         padding: 40px 20px 100px 20px
-
     .sections
         &__title
             margin: 0 0 40px 0
             font-size: 30px
-
     .footer
         padding: 15px 20px
 
