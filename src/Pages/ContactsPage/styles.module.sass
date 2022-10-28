@@ -53,3 +53,17 @@
         color: var(--primaryLightest)
     svg path
         fill: var(--primaryLightest)
+
+
+.mediaIconsList
+    @include flex(row, center)
+    @include gap(20px)
+
+.mediaIcon
+    cursor: pointer
+    transition: 0.2s
+    svg
+        width: 30px
+        height: 30px
+    &:hover
+        transform: scale(0.9)

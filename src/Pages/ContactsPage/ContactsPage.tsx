@@ -6,6 +6,10 @@ import PhoneIcon from "../../assets/icons/PhoneIcon";
 import Form from "../../components/Form/Input/Input";
 import Button from "../../components/Button/Button";
 import Textarea from "../../components/Form/Textarea/Textarea";
+import PortfolioIcon from "../../assets/icons/contacts/PortfolioIcon";
+import TelegramIcon from "../../assets/icons/contacts/TelegramIcon";
+import GitHubIcon from "../../assets/icons/contacts/GitHubIcon";
+import LinkedinIcon from "../../assets/icons/contacts/LinkedinIcon";
 
 const ContactsPage: React.FC<TPageProps> = (props) => {
     return (
@@ -45,8 +49,17 @@ const ContactsPage: React.FC<TPageProps> = (props) => {
                         <h1>
                             MY SOCIAL MEDIA
                         </h1>
-                        <div>
-                            social media also will be here
+                        <div className={s.mediaIconsList}>
+                            <div className={s.mediaIcon}>
+                                <LinkedinIcon/>
+                            </div>
+                            <div className={s.mediaIcon}>
+                                <TelegramIcon/>
+                            </div>
+                            <div className={s.mediaIcon}>
+                                <GitHubIcon/>
+                            </div>
+
                         </div>
                     </div>
                 </div>
