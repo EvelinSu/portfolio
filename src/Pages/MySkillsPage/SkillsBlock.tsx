@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {ReactNode, useState} from 'react';
 import s from "./styles.module.sass"
 
 type TSkillsBlockProps = {
     title: string,
-    icon: string,
+    icon: ReactNode,
     description: string
 }
 
@@ -13,7 +13,8 @@ const SkillsBlock: React.FC<TSkillsBlockProps> = (props) => {
 
     const hoveredStyles = {
         zIndex: 0,
-        transform: "scale(1)"
+        transform: "scale(1)",
+        opacity: 1
     }
 
     return (
@@ -30,7 +31,9 @@ const SkillsBlock: React.FC<TSkillsBlockProps> = (props) => {
                 { isHovered && props.description}
             </div>
             <div className={s.header}>
-                <img className={s.icon} src={props.icon} alt={props.title}/>
+                <div className={s.icon} title={props.title}>
+                    {props.icon}
+                </div>
             </div>
             <div className={s.body}>
                 <h1 className={s.title}>

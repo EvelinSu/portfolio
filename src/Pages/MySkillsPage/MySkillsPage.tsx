@@ -2,6 +2,16 @@ import React from "react";
 import {TPageProps} from "../../types";
 import s from "./styles.module.sass"
 import SkillsBlock from "./SkillsBlock";
+import AxiosIcon from "../../assets/icons/skills/AxiosIcon";
+import ReactIcon from "../../assets/icons/skills/ReactIcon";
+import ReduxIcon from "../../assets/icons/skills/ReduxIcon";
+import JavaScriptIcon from "../../assets/icons/skills/JavaScriptIcon";
+import TypeScriptIcon from "../../assets/icons/skills/TypeScriptIcon";
+import FormikIcon from "../../assets/icons/skills/FormikIcon";
+import SassIcon from "../../assets/icons/skills/SassIcon";
+import StyledComponentsIcon from "../../assets/icons/skills/StyledComponentsIcon";
+import JestIcon from "../../assets/icons/skills/JestIcon";
+import APIIcon from "../../assets/icons/skills/APIIcon";
 
 const MySkillsPage: React.FC<TPageProps> = (props) => {
     return (
@@ -20,8 +30,9 @@ const MySkillsPage: React.FC<TPageProps> = (props) => {
                 ))}
             </div>
             <div className={s.text}>
-                Aw! Pieces o' courage are forever dead. Why does the wave fall?
-                Aw! Pieces o' courage are forever dead. Why does the wave fall?
+                For styling, I can work with both <span>CSS</span> and <span>SASS</span> (with <span>BEM</span>).
+                For the React I prefer use <span>styled-components</span>, but I can also
+                work with <span>CSS-modules</span>.
             </div>
         </section>
     );
@@ -31,44 +42,54 @@ export default MySkillsPage;
 
 const skills = [
     {
-        icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "Redux",
-        description: "Cloudy, addled lubbers swiftly sail a undead, salty lass!"
-    },
-    {
-        icon: 'https://i.imgur.com/SkXt4tI.png',
+        icon: <ReactIcon/>,
         title: "React",
         description: "styled-components, css-modules, Girl of a sunny grace, fear the halitosis!"
     },
     {
-        icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "JS",
+        icon: <ReduxIcon/>,
+        title: "Redux",
+        description: "Cloudy, addled lubbers swiftly sail a undead, salty lass!"
+    },
+    {
+        icon: <JavaScriptIcon/>,
+        title: "JavaScript",
         description: " Yuck, The skiff hoists with beauty, scrape the seychelles. ye mighty ale- set sails for hunger!"
     },
     {
-        icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "TS",
+        icon: <TypeScriptIcon/>,
+        title: "TypeScript",
         description: " Avast, yer not hailing me without a greed! The sun waves booty like a jolly cloud!"
     },
     {
-        icon: 'https://i.imgur.com/SkXt4tI.png',
+        icon: <APIIcon/>,
+        title: "Rest API",
+        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+    },
+    {
+        icon: <StyledComponentsIcon/>,
+        title: "Styled Components",
+        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+    },
+    {
+        icon: <SassIcon/>,
+        title: "SASS",
+        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+    },
+    {
+        icon: <AxiosIcon/>,
         title: "Axios",
         description: "The cannibal pulls with life, break the pacific ocean before it whines"
     },
     {
-        icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "SASS",
-        description: "flex-box, grid, BEM, variables, mixins, Seashells are the clouds of the wet love"
+        icon: <FormikIcon/>,
+        title: "Formik",
+        description: "The cannibal pulls with life, break the pacific ocean before it whines"
     },
     {
-        icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "styled components",
-        description: "The anchor burns with riddle, pull the captain's quarters until it waves. "
-    },
-    {
-        icon: 'https://i.imgur.com/SkXt4tI.png',
-        title: "CSS modules",
-        description: "flex-box, grid, BEM, variables, mixins, Seashells are the clouds of the wet love"
+        icon: <JestIcon/>,
+        title: "Jest",
+        description: "The cannibal pulls with life, break the pacific ocean before it whines"
     },
 
 ]

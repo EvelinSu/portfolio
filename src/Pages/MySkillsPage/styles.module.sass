@@ -33,7 +33,7 @@
         z-index: -1
         background-color: var(--primaryDarker)
         transform: scale(0.5)
-        opacity: 0.9
+        opacity: 0.4
         transition: 0.3s
     @media all and (max-width: 1100px)
         text-align: center
@@ -45,17 +45,19 @@
     border-radius: 20px
 
 .title
-    font-size: 20px
+    font-size: 18px
     margin: 0
+    opacity: 0.9
 
 .icon
     width: 70px
 
 .text
-    @include flex(row, center)
-    justify-content: center
-    flex-grow: 1
     text-align: center
-    opacity: 0.4
     padding: 40px 0 0 0
     max-width: 500px
+    color: rgba(255, 255, 255, 0.4)
+    margin-top: auto
+    span
+        font-weight: bold
+        color: var(--primaryLightest)
