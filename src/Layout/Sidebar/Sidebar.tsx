@@ -32,7 +32,7 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
             <div className={s.sidebar__header}>
                 <img
                     className={s.avatar}
-                    src={'https://i.imgur.com/wYdLUUb.png'}
+                    src={'https://i.imgur.com/tqHGLfQ.png'}
                     alt={"avatar"}
                 />
                 <h1>Evelina<span className={"accentColor"}>Su</span></h1>
@@ -43,7 +43,7 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
                 </ul>
             </div>
             <div className={s.sidebar__footer}>
-                <a href={'tel:+79951232188'} className={s.mediaIcon}>
+                <a href={'tel:0'} className={s.mediaIcon}>
                     <PhoneIcon />
                 </a>
                 <a href={'mailto:eveelinsu@gmail.com'} className={s.mediaIcon}>
