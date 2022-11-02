@@ -9,6 +9,11 @@
     flex-direction: $direction
     align-items: $align
 
+@mixin blur($blurPx:"5px", $borderRadiusPx: initial)
+    backdrop-filter: blur($blurPx)
+    -webkit-backdrop-filter: blur($blurPx)
+    border-radius: $borderRadiusPx
+
 @mixin background-image
     background-size: cover
     background-repeat: no-repeat
