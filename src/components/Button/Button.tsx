@@ -1,7 +1,10 @@
 import React from 'react';
 import s from "./styles.module.sass"
 
-type TButtonProps = {
+type DefaultButtonPropsType = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+
+
+type TButtonProps = DefaultButtonPropsType & {
     label: string
     onClick?: () => void
     margin?: string
@@ -24,6 +27,7 @@ const Button = (props: TButtonProps) => {
         : (
             <button
                 onClick={onClickButtonHandler}
+                {...props}
                 className={`${s.button} ${props.className}`}
             >
                 {props.label}

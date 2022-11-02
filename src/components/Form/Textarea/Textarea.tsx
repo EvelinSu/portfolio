@@ -1,14 +1,17 @@
 import React, {FC} from 'react';
+import s from "../styles.module.sass";
 
-type TTextareaProps = {
-    placeholder: string,
+type DefaultTextareaType = React.DetailedHTMLProps<React.TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>
+
+type TTextareaProps = DefaultTextareaType & {
+    error?: string
 }
 
 const Textarea: FC<TTextareaProps> = (props) => {
     return (
        <textarea
-           className={"textarea"}
-           placeholder={props.placeholder}
+           className={`${!!props.error && s.form__error} ${s.textarea}`}
+           {...props}
        />
     );
 };

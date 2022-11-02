@@ -1,23 +1,24 @@
-import React, {ChangeEvent, FC, useState} from 'react';
-import "../styles.sass"
+import React, {ChangeEvent, DetailedHTMLProps, FC, InputHTMLAttributes} from 'react';
+import s from "../styles.module.sass"
+
+
+type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type TFormProps = {
-    placeholder: string,
+    error?: string
 }
 
-const Input: FC<TFormProps> = (props) => {
+const Input: FC<TFormProps & DefaultInputPropsType> = (props) => {
 
-    const [value, setValue] = useState('')
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setValue(e.currentTarget.value)
+        props.onChange && props.onChange(e)
     }
 
     return (
         <input
-            className={"input"}
-            placeholder={props.placeholder}
-            value={value}
+            className={`${!!props.error && s.form__error} ${s.input}`}
             onChange={onChangeHandler}
+            {...props}
         />
     );
 };
