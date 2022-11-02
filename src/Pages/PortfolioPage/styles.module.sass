@@ -13,11 +13,9 @@
 .blockContainer
     @include flex(row, center)
     @include gap(50px)
-    max-width: 100%
     z-index: 1
-    &:nth-child(2n)
-        flex-direction: row-reverse
-        position: relative
+    position: relative
+    flex-direction: inherit
 
 @media all and (max-width: 1050px)
     .blockContainer, .blockContainer:nth-child(2n)
@@ -33,7 +31,7 @@
     border-radius: 20px
     position: relative
     min-width: 320px
-    max-width: 500px
+    max-width: 400px
     box-shadow: 30px 30px 0 0 var(--primaryDark)
     @media all and (max-width: 1050px)
         max-width: 100%
@@ -61,8 +59,11 @@
     min-width: 250px
     width: 100%
 
+
 .image
+    object-fit: cover
     width: 100%
+    height: 200px
     border-radius: 20px
 
 .button

@@ -31,12 +31,19 @@ const SkillsBlock: React.FC<TSkillsBlockProps> = (props) => {
                 { isHovered && props.description}
             </div>
             <div className={s.header}>
-                <div className={s.icon} title={props.title}>
+                <div
+                    className={s.icon}
+                    title={props.title}
+                    style={{opacity: isHovered ? 0 : 1}}
+                >
                     {props.icon}
                 </div>
             </div>
             <div className={s.body}>
-                <h1 className={s.title}>
+                <h1
+                    style={{opacity: isHovered ? 0.2 : 1}}
+                    className={s.title}
+                >
                     {props.title}
                 </h1>
             </div>

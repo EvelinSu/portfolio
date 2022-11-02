@@ -15,7 +15,7 @@ const PortfolioBlock: React.FC<TypePortfolioBlockProps> = (props) => {
             <div className={s.body}>
                 <img className={s.image} src={props.image} alt={'ava'}/>
                 <div className={s.shadow}>
-                    <Button target="_blank" href={props.link} className={s.button} label={"Смотреть"}/>
+                    <Button target="_blank" href={props.link} className={s.button} label={"Demo"}/>
                 </div>
             </div>
             <div className={s.description}>

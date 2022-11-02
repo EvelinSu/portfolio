@@ -2,8 +2,12 @@ import React from "react";
 import {TPageProps} from "../../types";
 import s from "./styles.module.sass"
 import PortfolioBlock from "./PortfolioBlock";
+import {Slide} from "react-awesome-reveal";
 
 const PortfolioPage: React.FC<TPageProps> = (props) => {
+
+    const windowWidth = window.innerWidth
+
     return (
         <section className={s.content} id={props.id}>
             <h1 className={"sections__title"}>
@@ -11,17 +15,25 @@ const PortfolioPage: React.FC<TPageProps> = (props) => {
             </h1>
             <div className={s.flex}>
                 {works.map((el, i) => (
-                    <PortfolioBlock
+                    <Slide
                         key={i}
-                        title={el.title}
-                        link={el.link}
-                        description={el.description}
-                        image={el.image}
-                    />
+                        direction={windowWidth > 1050 ? (i % 2 === 0 ? "left" : "right") : "right"}
+                        duration={500}
+                        triggerOnce={true}
+                        style={{flexDirection: i % 2 === 0 ? "row-reverse" : "initial"}}
+                    >
+                        <PortfolioBlock
+                            title={el.title}
+                            link={el.link}
+                            description={el.description}
+                            image={el.image}
+                        />
+                    </Slide>
                 ))}
             </div>
         </section>
-    );
+    )
+        ;
 };
 
 export default PortfolioPage;

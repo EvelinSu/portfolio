@@ -12,6 +12,7 @@ import SassIcon from "../../assets/icons/skills/SassIcon";
 import StyledComponentsIcon from "../../assets/icons/skills/StyledComponentsIcon";
 import JestIcon from "../../assets/icons/skills/JestIcon";
 import APIIcon from "../../assets/icons/skills/APIIcon";
+import {Zoom} from "react-awesome-reveal";
 
 const MySkillsPage: React.FC<TPageProps> = (props) => {
     return (
@@ -20,14 +21,17 @@ const MySkillsPage: React.FC<TPageProps> = (props) => {
                 My skills <div className={"sections__title-decoration"}>{props.id?.toUpperCase()}</div>
             </h1>
             <div className={s.grid}>
-                {skills.map((el, i) => (
-                    <SkillsBlock
-                        key={i}
-                        title={el.title}
-                        description={el.description}
-                        icon={el.icon}
-                    />
-                ))}
+                <Zoom cascade={true} duration={350} triggerOnce={true}>
+                    {skills.map((el, i) => (
+                        <SkillsBlock
+                            key={i}
+                            title={el.title}
+                            description={el.description}
+                            icon={el.icon}
+                        />
+
+                    ))}
+                </Zoom>
             </div>
             <div className={s.text}>
                 For styling, I can work with both <span>CSS</span> and <span>SASS</span> (with <span>BEM</span>).
@@ -42,54 +46,54 @@ export default MySkillsPage;
 
 const skills = [
     {
-        icon: <ReactIcon/>,
+        icon: <ReactIcon />,
         title: "React",
-        description: "styled-components, css-modules, Girl of a sunny grace, fear the halitosis!"
+        description: "JavaScript-based UI development library."
     },
     {
-        icon: <ReduxIcon/>,
+        icon: <ReduxIcon />,
         title: "Redux",
-        description: "Cloudy, addled lubbers swiftly sail a undead, salty lass!"
+        description: "JavaScript library for managing and centralizing application state."
     },
     {
-        icon: <JavaScriptIcon/>,
+        icon: <JavaScriptIcon />,
         title: "JavaScript",
-        description: " Yuck, The skiff hoists with beauty, scrape the seychelles. ye mighty ale- set sails for hunger!"
+        description: "The Programming Language for the Web that conforms to the ECMAScript specification. "
     },
     {
-        icon: <TypeScriptIcon/>,
+        icon: <TypeScriptIcon />,
         title: "TypeScript",
-        description: " Avast, yer not hailing me without a greed! The sun waves booty like a jolly cloud!"
+        description: "A syntactic superset of JavaScript which adds static typing."
     },
     {
-        icon: <APIIcon/>,
+        icon: <APIIcon />,
         title: "Rest API",
-        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+        description: "Architectural style for an application program interface (API) that uses HTTP requests to access and use data."
     },
     {
-        icon: <StyledComponentsIcon/>,
+        icon: <StyledComponentsIcon />,
         title: "Styled Components",
-        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+        description: "Is a CSS-in-JS styling solution that creates a platform for developers to write actual CSS to style components."
     },
     {
-        icon: <SassIcon/>,
+        icon: <SassIcon />,
         title: "SASS",
-        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+        description: "Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins into regular CSS."
     },
     {
-        icon: <AxiosIcon/>,
+        icon: <AxiosIcon />,
         title: "Axios",
-        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+        description: "Promise-based library used with Node.js and browser to make asynchronous JavaScript HTTP requests."
     },
     {
-        icon: <FormikIcon/>,
+        icon: <FormikIcon />,
         title: "Formik",
-        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+        description: "Small group of React components and hooks for building forms in React and React Native."
     },
     {
-        icon: <JestIcon/>,
+        icon: <JestIcon />,
         title: "Jest",
-        description: "The cannibal pulls with life, break the pacific ocean before it whines"
+        description: "JavaScript library for creating, running, and structuring tests."
     },
 
 ]

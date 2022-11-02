@@ -18,6 +18,8 @@
     backdrop-filter: blur(3px)
     -webkit-backdrop-filter: blur(3px)
     padding: 40px 40px
+    @media all and (max-width: 760px)
+        padding: 20px
 
 .title
     @include flex(column, center)
@@ -28,7 +30,6 @@
     width: 100%
     &:after
         content: none
-
-@media all and (max-width: 760px)
-    section
-        padding: 40px 20px 100px 20px
+    @media all and (max-width: 760px)
+        padding: 20px 0
+        font-size: 22px

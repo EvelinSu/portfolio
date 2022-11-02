@@ -19,25 +19,34 @@
     padding: 30px
     position: relative
     cursor: pointer
+    @media all and (max-width: 1100px)
+        text-align: center
+        flex-direction: column
+    @media all and (max-width: 760px)
+        width: 80px
+        padding: 10px
+        svg
+            width: 40px
+            height: 40px
     &__description
         @include flex(column, center)
         justify-content: center
         padding: 20px
-        font-size: 14px
+        font-size: 12px
         top: -35px
         position: absolute
         overflow: hidden
         width: 200px
-        border-radius: 50%
         height: 200px
         z-index: -1
         background-color: var(--primaryDarker)
         transform: scale(0.5)
-        opacity: 0.4
+        border-radius: 50%
         transition: 0.3s
-    @media all and (max-width: 1100px)
-        text-align: center
-        flex-direction: column
+        @media all and (max-width: 760px)
+            width: 130px
+            height: 130px
+            font-size: 10px
 
 .header
     @include flex(column, center)
@@ -45,19 +54,22 @@
     border-radius: 20px
 
 .title
+    @include blur(5px)
     font-size: 18px
     margin: 0
-    opacity: 0.9
-
+    transition: 0.5s
+    @include blur(10px, 20px)
+    @media all and (max-width: 760px)
+        font-size: 14px
 .icon
     width: 70px
 
 .text
+    @include blur(5px)
     text-align: center
-    padding: 40px 0 0 0
     max-width: 500px
     color: rgba(255, 255, 255, 0.4)
-    margin-top: auto
+    margin-top: 60px
     span
         font-weight: bold
         color: var(--primaryLightest)
