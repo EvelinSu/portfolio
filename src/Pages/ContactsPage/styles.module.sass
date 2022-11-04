@@ -8,10 +8,9 @@
     @media all and (max-width: 460px)
         border-radius: 0 0 30px 30px
 
-.grid
-    display: grid
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr))
-    gap: 30px
+.contacts
+    @include flex(column, center)
+    gap: 0
 
 .center
     @include flex(row, center)
@@ -21,7 +20,7 @@
     @include flex(row)
     gap: 70px
     width: 100%
-    max-width: 900px
+    max-width: 880px
     @media all and (max-width: 1000px)
         flex-direction: column
     @media all and (max-width: 760px)
@@ -29,33 +28,36 @@
 
 .column
     @include flex(column)
-    gap: 20px
+    gap: 10px
     width: 100%
     position: relative
     &:first-of-type:after
         content: ''
         height: 50%
-        border-right: 3px solid rgba(255, 255, 255, 0.1)
+        border-right: 1px solid rgba(255, 255, 255, 0.1)
         position: absolute
         right: -35px
         top: 50px
         @media all and (max-width: 1000px)
             border-right: none
 
-
 .item
     @include flex(row, center)
     text-align: center
-    gap: 20px
-    padding: 7px 20px
+    gap: 10px
+    font-size: 14px
+    padding: 10px 10px
     text-decoration: none
-    background-color: var(--primaryLight)
     border-radius: 20px
+    margin-left: -24px
     &:hover
         color: var(--primaryLightest)
+    svg
+        min-width: 24px
+        max-width: 24px
+        height: 24px
     svg path
         fill: var(--primaryLightest)
-
 
 .mediaIconsList
     @include flex(row, center)
@@ -69,4 +71,4 @@
         width: 30px
         height: 30px
     &:hover
-        transform: scale(0.9)
+        opacity: 0.5

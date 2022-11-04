@@ -5,9 +5,11 @@ import {TPageProps} from "../../types";
 import PhoneIcon from "../../assets/icons/PhoneIcon";
 import TelegramIcon from "../../assets/icons/contacts/TelegramIcon";
 import GitHubIcon from "../../assets/icons/contacts/GitHubIcon";
-import LinkedinIcon from "../../assets/icons/contacts/LinkedinIcon";
 import {Bounce, Fade} from "react-awesome-reveal";
 import SendEmail from "./SendEmail";
+import EmailIcon from "../../assets/icons/contacts/EmailIcon";
+import CodewarsIcon from "../../assets/icons/contacts/CodewarsIcon";
+import LocationIcon from "../../assets/icons/contacts/LocationIcon";
 
 const ContactsPage: React.FC<TPageProps> = (props) => {
     return (
@@ -18,32 +20,26 @@ const ContactsPage: React.FC<TPageProps> = (props) => {
             </h1>
             <div className={s.row}>
                 <div className={s.column}>
-                    <div className={s.grid}>
-                        <Fade triggerOnce={true} cascade={true}>
-                            <a href={"#"} className={s.item}>
+                    <div className={s.contacts}>
+                        <Fade triggerOnce={true} cascade={true} duration={1000}>
+                            <a href={'tel:+79951232188'} className={s.item}>
                                 <PhoneIcon />
                                 <div className={s.itemText}>
-                                    contact
+                                    +7(995)123-21-88
                                 </div>
                             </a>
-                            <a href={"#"} className={s.item}>
-                                <PhoneIcon />
+                            <a href={'mailto:eveelinsu@gmail.com'} className={s.item}>
+                                <EmailIcon />
                                 <div className={s.itemText}>
-                                    contact
+                                    eveelinsu@gmail.com
                                 </div>
                             </a>
-                            <a href={"#"} className={s.item}>
-                                <PhoneIcon />
+                            <div className={s.item}>
+                                <LocationIcon />
                                 <div className={s.itemText}>
-                                    contact
+                                    Sochi, Russia
                                 </div>
-                            </a>
-                            <a href={"#"} className={s.item}>
-                                <PhoneIcon />
-                                <div className={s.itemText}>
-                                    contact
-                                </div>
-                            </a>
+                            </div>
                         </Fade>
                     </div>
                     <div className={s.center} style={{flexDirection: "column"}}>
@@ -51,22 +47,25 @@ const ContactsPage: React.FC<TPageProps> = (props) => {
                             MY SOCIAL MEDIA
                         </h1>
                         <div className={s.mediaIconsList}>
-                            <Bounce delay={2000} triggerOnce={true} cascade={true}>
-                                <div className={s.mediaIcon}>
-                                    <LinkedinIcon />
-                                </div>
-                                <div className={s.mediaIcon}>
+                            <Bounce delay={1500} triggerOnce={true} cascade={true}>
+                                <a href={"https://www.codewars.com/users/EvelinSu"}
+                                   target={"_blank"}
+                                   className={s.mediaIcon}
+                                >
+                                    <CodewarsIcon />
+                                </a>
+                                <a href={"https://www.t.me/EvelinaSu"} target={"_blank"} className={s.mediaIcon}>
                                     <TelegramIcon />
-                                </div>
-                                <div className={s.mediaIcon}>
+                                </a>
+                                <a href={"https://github.com/EvelinSu"} target={"_blank"} className={s.mediaIcon}>
                                     <GitHubIcon />
-                                </div>
+                                </a>
                             </Bounce>
                         </div>
                     </div>
                 </div>
                 <div className={s.column}>
-                    <SendEmail/>
+                    <SendEmail />
                 </div>
             </div>
         </section>
