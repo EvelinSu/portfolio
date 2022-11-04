@@ -3,6 +3,8 @@ import {TPageProps} from "../../types";
 import s from "./styles.module.sass"
 import PortfolioBlock from "./PortfolioBlock";
 import {Slide} from "react-awesome-reveal";
+import socialNetworkImg from "../../assets/img/social-network.jpg"
+import inFutureImg from "../../assets/img/in-future.jpeg"
 
 const PortfolioPage: React.FC<TPageProps> = (props) => {
 
@@ -27,6 +29,7 @@ const PortfolioPage: React.FC<TPageProps> = (props) => {
                             link={el.link}
                             description={el.description}
                             image={el.image}
+                            inProgress={el.inProgress}
                         />
                     </Slide>
                 ))}
@@ -40,24 +43,27 @@ export default PortfolioPage;
 
 const works = [
     {
-        title: 'Jolly, sunny pirate',
-        image: 'https://i.imgur.com/iapZ8JD.png',
-        description: 'Ships fall with urchin at the undead prison! Aye! Pieces o hunger are forever rough. Jolly,' +
-            ' scrawny seashell. go to cabo rojo.',
-        link: '//www.google.com'
+        title: 'Social network',
+        image: socialNetworkImg,
+        description: 'This is my research project, sharpening skills. \r\n Stack: React, Redux, TypeScript,' +
+            ' Styled-components, Redux Thunk, Axios, React Router DOM, Formik + Yup, REST API, Jest',
+        link: 'https://evelinsu.github.io/samurai-way-main/#/',
+        inProgress: true
     },
     {
-        title: 'Greed, endurance ',
-        image: 'https://i.imgur.com/Dlh1bqt.png',
+        title: 'In future',
+        image: inFutureImg,
         description: 'Ho-ho-ho! strength of malaria. Arrr, never crush a freebooter. Lubbers are the seas of the sunny love. Jolly, yer not' +
             ' blowing me without a desolation!',
-        link: '//www.google.com'
+        link: '',
+        inProgress: false
     },
     {
-        title: 'Yellow fever, love',
-        image: 'https://i.imgur.com/8T4DKS2.png',
+        title: 'In future',
+        image: inFutureImg,
         description: 'The swashbuckling captain darkly trades the wind. Oh! Pieces o life are forever wet. Well, big' +
             ' girl. go to la marsa beach.',
-        link: '//www.google.com'
+        link: '',
+        inProgress: false
     }
 ]

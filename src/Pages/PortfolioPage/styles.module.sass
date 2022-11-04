@@ -16,6 +16,10 @@
     z-index: 1
     position: relative
     flex-direction: inherit
+    &:hover
+        .shadow
+            opacity: 1
+
 
 @media all and (max-width: 1050px)
     .blockContainer, .blockContainer:nth-child(2n)
@@ -32,7 +36,9 @@
     position: relative
     min-width: 320px
     max-width: 400px
-    box-shadow: 30px 30px 0 0 var(--primaryDark)
+    box-shadow: 20px 20px 0 0 var(--primaryDarker), inset -20px -20px 100px 1px var(--primaryLightest)
+    img
+        z-index: -1
     @media all and (max-width: 1050px)
         max-width: 100%
 
@@ -42,18 +48,20 @@
     height: 100%
     width: 100%
     position: absolute
-    background-color: rgba(0, 0, 0, 0.6)
+    background-color: rgba(30, 68, 105, 0.6)
     border-radius: inherit
     opacity: 0
-    backdrop-filter: blur(5px)
-    -webkit-backdrop-filter: blur(5px)
+    backdrop-filter: blur(2px)
+    -webkit-backdrop-filter: blur(2px)
     transition: 0.5s
-    &:hover
-        opacity: 1
 
 .title
     font-size: 20px
     font-weight: 500
+    span
+        font-size: 14px
+        font-weight: 100
+        opacity: 0.4
 
 .description
     min-width: 250px
@@ -70,6 +78,10 @@
     backdrop-filter: none
     font-size: 20px
     padding: 10px 25px
+    border-width: 3px
+    background-color: var(--primary)
+    border-color: transparent
+    color: rgba(255, 255, 255, 0.7)
 
 @media all and (max-width: 1050px)
     .content
