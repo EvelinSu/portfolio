@@ -5,6 +5,7 @@ import {SECTIONS} from "../../App";
 import EmailIcon from '../../assets/icons/contacts/EmailIcon';
 import PhoneIcon from '../../assets/icons/contacts/PhoneIcon';
 import PortfolioIcon from "../../assets/icons/contacts/PortfolioIcon";
+import cv from "../../assets/cv_Evelina.pdf"
 
 type TSidebarProps = {
     sections: Array<string>
@@ -43,13 +44,13 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
                 </ul>
             </div>
             <div className={s.sidebar__footer}>
-                <a href={'tel:0'} className={s.mediaIcon}>
+                <a href={'tel:+79951232188'} className={s.mediaIcon}>
                     <PhoneIcon />
                 </a>
                 <a href={'mailto:eveelinsu@gmail.com'} className={s.mediaIcon}>
                     <EmailIcon />
                 </a>
-                <a href={'https://www.google.com'} target="_blank" className={s.mediaIcon}>
+                <a href={cv} target={"_blank"} className={s.mediaIcon}>
                     <PortfolioIcon />
                 </a>
             </div>

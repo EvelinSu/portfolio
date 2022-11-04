@@ -32,11 +32,14 @@
             height: 40px
     &:after
         opacity: 0
+        border-radius: 10px
         visibility: hidden
     &:hover
         transform: scale(1.2)
         background-color: rgba(255, 255, 255, 0.1)
         border-radius: 50%
+        svg path
+            fill: var(--primaryLightest)
         &:after
             content: ""
             background-color: var(--primaryDarkest)
@@ -47,29 +50,20 @@
             visibility: visible
             position: absolute
             bottom: calc(100% + 5px)
-            border-radius: 10px
             transition: 0.2s
 
 // стилизация отдельно каждой иконки
 .mediaIcon
     &:nth-of-type(1)
         &:hover
-            svg path
-                fill: var(--primaryLightest)
             &:after
                 content: "phone"
     &:nth-of-type(2)
         &:hover
-            svg rect
-                fill: var(--primaryLightest)
-            svg path
-                fill: var(--primaryLight)
             &:after
                 content: "gmail"
     &:nth-of-type(3)
         &:hover
-            svg path
-                fill: var(--primaryLightest)
             &:after
                 content: "cv"
 
