@@ -41,7 +41,7 @@ const SkillsBlock: React.FC<TSkillsBlockProps> = (props) => {
             </div>
             <div className={s.body}>
                 <h1
-                    style={{opacity: isHovered ? 0.2 : 1}}
+                    style={{opacity: isHovered ? 0 : 1}}
                     className={s.title}
                 >
                     {props.title}
