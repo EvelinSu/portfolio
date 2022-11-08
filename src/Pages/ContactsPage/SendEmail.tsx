@@ -51,7 +51,7 @@ const SendEmail = () => {
                         .trim()
                         .required('Required')
                         .min(1, 'must be more than 1')
-                        .max(500, 'must be less than 500'),
+                        .max(10000, 'must be less than 500'),
         }),
         onSubmit: (values) => {
             setIsLoading(true)
@@ -74,6 +74,7 @@ const SendEmail = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.name}
+                        title={errors.name}
                         required
                     />
                 </div>
@@ -86,6 +87,7 @@ const SendEmail = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
+                        title={errors.email}
                         required
                     />
                 </div>
@@ -98,6 +100,7 @@ const SendEmail = () => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.message}
+                    title={errors.message}
                     required
                 />
             </div>
