@@ -10,6 +10,7 @@ import SendEmail from "./SendEmail";
 import EmailIcon from "../../assets/icons/contacts/EmailIcon";
 import CodewarsIcon from "../../assets/icons/contacts/CodewarsIcon";
 import LocationIcon from "../../assets/icons/contacts/LocationIcon";
+import LinkedinIcon from "../../assets/icons/contacts/LinkedinIcon";
 
 const ContactsPage: React.FC<TPageProps> = (props) => {
     return (
@@ -59,6 +60,9 @@ const ContactsPage: React.FC<TPageProps> = (props) => {
                                 </a>
                                 <a href={"https://github.com/EvelinSu"} target={"_blank"} className={s.mediaIcon}>
                                     <GitHubIcon />
+                                </a>
+                                <a href={"https://linkedin.com/in/evelina-sukhareva-3b9670256"} target={"_blank"} className={s.mediaIcon}>
+                                    <LinkedinIcon />
                                 </a>
                             </Bounce>
                         </div>

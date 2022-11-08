@@ -1,12 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Form from "../../components/Form/Input/Input";
 import Textarea from "../../components/Form/Textarea/Textarea";
 import s from "../../components/Form/styles.module.sass";
 import Button from "../../components/Button/Button";
 import * as Yup from 'yup';
 import {useFormik} from "formik";
+import emailJs from "emailjs-com"
+import SendMessageIcon from "../../assets/icons/SendMessageIcon";
 
 const SendEmail = () => {
+
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+
+    const sendEmail = (values: LoginRequest) => {
+        return emailJs.send("service_3wgjpxg", "template_vrwsfiq", values, "qwhCDsAlkYX2EAa_o")
+    }
 
     type LoginRequest = {
         name: string;
@@ -22,6 +30,7 @@ const SendEmail = () => {
         isValid,
         values,
         errors,
+        resetForm
     } = useFormik<LoginRequest>({
         initialValues: {
             name: "",
@@ -29,14 +38,27 @@ const SendEmail = () => {
             message: ""
         },
         validationSchema: Yup.object({
-            name: Yup.string().trim().required('Required').min(1, 'must be more than 1').max(30, 'must be less than' +
-                ' 30'),
-            email: Yup.string().trim().email('Invalid email address').required('Required'),
-            message: Yup.string().trim().required('Required').min(1, 'must be more than 1').max(500, 'must be less than' +
-                ' 500'),
+            name: Yup.string()
+                     .trim()
+                     .required('Required')
+                     .min(1, 'must be more than 1')
+                     .max(30, 'must be less than 30'),
+            email: Yup.string()
+                      .trim()
+                      .email('Invalid email address')
+                      .required('Required'),
+            message: Yup.string()
+                        .trim()
+                        .required('Required')
+                        .min(1, 'must be more than 1')
+                        .max(500, 'must be less than 500'),
         }),
-        onSubmit: ({name, email, message}) => {
-            alert(`${name}, ${email}, ${message}`)
+        onSubmit: (values) => {
+            setIsLoading(true)
+            sendEmail(values)
+                .then(() => {resetForm()})
+                .catch((err) => console.log(err))
+                .finally(() => setIsLoading(false))
         }
     });
 
@@ -82,9 +104,10 @@ const SendEmail = () => {
             <div className={s.form__center}>
                 <Button
                     type={'submit'}
-                    className={s.button}
-                    label={"Send message"}
+                    className={`${s.button} ${isLoading && s.buttonLoading}`}
+                    label={"Send"}
                     disabled={!isValid}
+                    icon={<SendMessageIcon/>}
                 />
             </div>
         </form>

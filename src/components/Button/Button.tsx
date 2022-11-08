@@ -3,7 +3,6 @@ import s from "./styles.module.sass"
 
 type DefaultButtonPropsType = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
-
 type TButtonProps = DefaultButtonPropsType & {
     label: string
     onClick?: () => void
@@ -11,6 +10,7 @@ type TButtonProps = DefaultButtonPropsType & {
     href?: string
     target?: string
     className?: string
+    icon?: React.ReactNode
 }
 
 const Button = (props: TButtonProps) => {
@@ -20,7 +20,11 @@ const Button = (props: TButtonProps) => {
     }
 
     return props.href ? (
-            <a href={props.href} target={props.target} className={`${s.button} ${props.className}`} style={{margin: props.margin}}>
+            <a href={props.href}
+               target={props.target}
+               className={`${s.button} ${props.className}`}
+               style={{margin: props.margin}}
+            >
                 {props.label}
             </a>
         )
@@ -30,7 +34,8 @@ const Button = (props: TButtonProps) => {
                 {...props}
                 className={`${s.button} ${props.className}`}
             >
-                {props.label}
+                    {props.label}
+                    {props.icon}
             </button>
         )
 };
