@@ -42,7 +42,7 @@ const SendEmail = () => {
                      .trim()
                      .required('Required')
                      .min(1, 'must be more than 1')
-                     .max(30, 'must be less than 30'),
+                     .max(100, 'must be less than 100'),
             email: Yup.string()
                       .trim()
                       .email('Invalid email address')
@@ -51,7 +51,7 @@ const SendEmail = () => {
                         .trim()
                         .required('Required')
                         .min(1, 'must be more than 1')
-                        .max(10000, 'must be less than 500'),
+                        .max(10000, 'must be less than 10000'),
         }),
         onSubmit: (values) => {
             setIsLoading(true)

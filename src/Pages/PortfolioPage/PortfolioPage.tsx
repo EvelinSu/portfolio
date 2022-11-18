@@ -3,7 +3,6 @@ import {TPageProps} from "../../types";
 import s from "./styles.module.sass"
 import PortfolioBlock from "./PortfolioBlock";
 import {Slide} from "react-awesome-reveal";
-import socialNetworkImg from "../../assets/img/social-network.jpg"
 import inFutureImg from "../../assets/img/in-future.jpeg"
 
 const PortfolioPage: React.FC<TPageProps> = (props) => {
@@ -26,7 +25,7 @@ const PortfolioPage: React.FC<TPageProps> = (props) => {
                     >
                         <PortfolioBlock
                             title={el.title}
-                            link={el.link}
+                            demo={el.demo}
                             description={el.description}
                             image={el.image}
                             inProgress={el.inProgress}
@@ -44,26 +43,29 @@ export default PortfolioPage;
 const works = [
     {
         title: 'Social network',
-        image: socialNetworkImg,
-        description: 'This is my research project, sharpening skills. \r\n Stack: React, Redux, TypeScript,' +
-            ' Styled-components, Redux Thunk, Axios, React Router DOM, Formik + Yup, REST API, Jest',
-        link: 'https://evelinsu.github.io/samurai-way-main/#/',
+        image: "https://i.imgur.com/yD4adaM.png",
+        description: 'This is my research project, sharpening skills. Stack: React, Redux, TypeScript,' +
+            ' Styled-components, Redux-toolkit, Redux Thunk, Axios, React Router DOM, Formik + Yup, REST API, Jest',
+        demo: 'https://evelinsu.github.io/samurai-way-main/#/',
+        code: 'https://github.com/EvelinSu/samurai-way-main',
         inProgress: true
     },
     {
-        title: 'In future',
-        image: inFutureImg,
-        description: 'Ho-ho-ho! strength of malaria. Arrr, never crush a freebooter. Lubbers are the seas of the sunny love. Jolly, yer not' +
-            ' blowing me without a desolation!',
-        link: '',
-        inProgress: false
+        title: 'Learning by cards',
+        image: "https://i.imgur.com/HL3L7T5.png",
+        description: 'Applications for learning by cards. Stack: React, Redux, TypeScript, Styled-components,' +
+            ' Redux-toolkit, Redux Thunk, Axios, React Router DOM v6, REST API, Formik + Yup',
+        demo: 'https://evelinsu.github.io/friday-project/#/',
+        code: 'https://github.com/EvelinSu/friday-project',
+        inProgress: true
     },
     {
         title: 'In future',
         image: inFutureImg,
         description: 'The swashbuckling captain darkly trades the wind. Oh! Pieces o life are forever wet. Well, big' +
             ' girl. go to la marsa beach.',
-        link: '',
+        demo: '',
+        code: '',
         inProgress: false
     }
 ]
