@@ -20,7 +20,7 @@ const PortfolioPage: React.FC<TPageProps> = (props) => {
                         direction={windowWidth > 1050 ? (i % 2 === 0 ? "left" : "right") : "right"}
                         duration={500}
                         triggerOnce={true}
-                        style={{flexDirection: i % 2 === 0 ? "row-reverse" : "initial"}}
+                        style={{display: "flex", flexDirection: i % 2 === 0 ? "row-reverse" : "initial"}}
                     >
                         <PortfolioBlock
                             title={el.title}
@@ -62,7 +62,7 @@ const works = [
     {
         title: 'Corporate application',
         image: "https://i.imgur.com/VRGpGnW.jpg",
-        description: 'A corporate application for tracking sensor readings, tracking employee tasks (as in Jira), ' +
+        description: 'A corporate application for tracking sensor readings, tracking employee tasks (like in Jira), ' +
             'storing data about orders, about completed tasks',
         demo: '',
         code: '',

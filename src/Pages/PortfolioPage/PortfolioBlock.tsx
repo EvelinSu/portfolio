@@ -14,7 +14,7 @@ const PortfolioBlock: React.FC<TypePortfolioBlockProps> = (props) => {
     return (
         <div className={s.blockContainer}>
             <div className={s.body}>
-                <a href={props.image} target={"_blank"}>
+                <a className={s.imageContainer} href={props.image} target={"_blank"}>
                     <img className={s.image} src={props.image} alt={'ava'}/>
                 </a>
 
