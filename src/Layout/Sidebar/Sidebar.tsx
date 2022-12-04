@@ -6,6 +6,7 @@ import EmailIcon from '../../assets/icons/contacts/EmailIcon';
 import PhoneIcon from '../../assets/icons/contacts/PhoneIcon';
 import PortfolioIcon from "../../assets/icons/contacts/PortfolioIcon";
 import cv from "../../assets/cv_Evelina.pdf"
+import myPhoto from "../../assets/img/myPngPhoto.png"
 
 type TSidebarProps = {
     sections: Array<string>
@@ -33,7 +34,7 @@ const Sidebar: React.FC<TSidebarProps> = (props) => {
             <div className={s.sidebar__header}>
                 <img
                     className={s.avatar}
-                    src={'https://i.imgur.com/tqHGLfQ.png'}
+                    src={myPhoto}
                     alt={"avatar"}
                 />
                 <h1>Evelina<span className={"accentColor"}>Su</span></h1>

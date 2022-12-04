@@ -54,8 +54,8 @@ const works = [
         image: "https://i.imgur.com/yD4adaM.png",
         description: 'This is my research project, sharpening skills. Stack: React, Redux, TypeScript,' +
             ' Styled-components, Redux-toolkit, Redux Thunk, Axios, React Router DOM, Formik + Yup, REST API, Jest',
-        demo: 'https://evelinsu.github.io/samurai-way-main/#/',
-        code: 'https://github.com/EvelinSu/samurai-way-main',
+        demo: 'https://evelinsu.github.io/social-network/#/',
+        code: 'https://github.com/EvelinSu/social-network',
         postscript: "in progress"
     },
 
