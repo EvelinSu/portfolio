@@ -8,13 +8,24 @@
         color: var(--textOnPrimary)
         font-weight: 300
         max-height: 100vh
+        @media all and (max-width: 760px)
+            flex-direction: column
+            max-height: initial
 
 .sections
+    @media all and (max-width: 760px)
+        padding: 40px 20px 60px 20px
     &__container
         max-height: 100%
         overflow: auto
         width: 100%
         padding: 10px 10px 0 0
+        @media all and (max-width: 760px)
+            overflow: initial
+            padding-left: 10px
+        @media all and (max-width: 460px)
+            padding: 0
+
     &__title
         display: flex
         justify-content: center
@@ -40,6 +51,8 @@
         -webkit-user-select: none
         -moz-user-select: none
         pointer-events: none
+        @media all and (max-width: 1150px)
+            transform: scale(3)
         @media all and (max-width: 950px)
             display: none
     &:after
@@ -61,6 +74,8 @@ section
     overflow: hidden
     position: relative
     z-index: 0
+    @media all and (max-width: 1150px)
+        min-height: auto
     &:nth-child(1n)
         background-color: var(--primaryLight)
     &:nth-child(2n)
@@ -74,29 +89,5 @@ section
     padding: 10px 40px
     text-align: end
     color: rgba(255, 255, 255, 0.3)
-
-@media all and (max-width: 1150px)
-    .sections
-        &__title-decoration
-            transform: scale(3)
-    section
-        min-height: auto
-
-@media all and (max-width: 760px)
-    .site
-        &__wrapper
-            flex-direction: column
-            max-height: initial
-    .sections
-        &__container
-            overflow: initial
-            padding-left: 10px
-    section
-        padding: 40px 20px 60px 20px
-    .footer
+    @media all and (max-width: 760px)
         padding: 15px 20px
-
-@media all and (max-width: 460px)
-    .sections
-        &__container
-            padding: 0

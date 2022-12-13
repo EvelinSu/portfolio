@@ -12,10 +12,6 @@ export const SECTIONS = ["Home", "Skills", "Portfolio", "Contacts"]
 
 function App() {
 
-    // useEffect(() => {
-    //     alert('my portfolio in progress ｡ﾟ(｡ﾉωヽ｡)ﾟ｡')
-    // }, [])
-
     return (
         <div className="site__wrapper">
             <ParticlesContainer />

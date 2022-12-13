@@ -19,25 +19,22 @@ const Button = (props: TButtonProps) => {
         props.onClick && props.onClick()
     }
 
-    return props.href ? (
-            <a href={props.href}
-               target={props.target}
-               className={`${s.button} ${props.className}`}
-               style={{margin: props.margin}}
-            >
-                {props.label}
-            </a>
-        )
-        : (
-            <button
-                onClick={onClickButtonHandler}
-                {...props}
-                className={`${s.button} ${props.className}`}
-            >
-                    {props.label}
-                    {props.icon}
-            </button>
-        )
+    return props.href
+        ? <a href={props.href}
+             target={props.target}
+             className={`${s.button} ${props.className}`}
+             style={{margin: props.margin}}
+        >
+            {props.label}
+        </a>
+        : <button
+            onClick={onClickButtonHandler}
+            {...props}
+            className={`${s.button} ${props.className}`}
+        >
+            {props.label}
+            {props.icon}
+        </button>
 };
 
 export default Button;

@@ -1,7 +1,7 @@
 import React from 'react';
 import s from "./styles.module.sass"
 import "../../components/Form/styles.module.sass"
-import {TPageProps} from "../../types";
+import {TPageProps} from "../types";
 import PhoneIcon from "../../assets/icons/PhoneIcon";
 import TelegramIcon from "../../assets/icons/contacts/TelegramIcon";
 import GitHubIcon from "../../assets/icons/contacts/GitHubIcon";
@@ -17,7 +17,9 @@ const ContactsPage: React.FC<TPageProps> = (props) => {
         <section className={s.content} id={props.id}>
             <h1 className={"sections__title"}>
                 Contacts
-                <div className={"sections__title-decoration"}>{props.id?.toUpperCase()}</div>
+                <div className={"sections__title-decoration"}>
+                    {props.id?.toUpperCase()}
+                </div>
             </h1>
             <div className={s.row}>
                 <div className={s.column}>
@@ -55,13 +57,22 @@ const ContactsPage: React.FC<TPageProps> = (props) => {
                                 >
                                     <CodewarsIcon />
                                 </a>
-                                <a href={"https://www.t.me/EvelinaSu"} target={"_blank"} className={s.mediaIcon}>
+                                <a href={"https://www.t.me/EvelinaSu"}
+                                   target={"_blank"}
+                                   className={s.mediaIcon}
+                                >
                                     <TelegramIcon />
                                 </a>
-                                <a href={"https://github.com/EvelinSu"} target={"_blank"} className={s.mediaIcon}>
+                                <a href={"https://github.com/EvelinSu"}
+                                   target={"_blank"}
+                                   className={s.mediaIcon}
+                                >
                                     <GitHubIcon />
                                 </a>
-                                <a href={"https://linkedin.com/in/evelina-sukhareva-3b9670256"} target={"_blank"} className={s.mediaIcon}>
+                                <a href={"https://linkedin.com/in/evelina-sukhareva-3b9670256"}
+                                   target={"_blank"}
+                                   className={s.mediaIcon}
+                                >
                                     <LinkedinIcon />
                                 </a>
                             </Bounce>

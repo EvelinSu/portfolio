@@ -1,7 +1,7 @@
 import React from 'react';
 import s from "./styles.module.sass"
 import Button from "../../components/Button/Button";
-import {TPageProps} from "../../types";
+import {TPageProps} from "../types";
 import {SECTIONS} from "../../App";
 import {Bounce, Fade} from "react-awesome-reveal";
 
@@ -14,7 +14,7 @@ const HomePage: React.FC<TPageProps> = (props) => {
                 <div className={s.flexColumn}>
                     <Fade
                         cascade={true}
-                        duration={ windowWidth > 760 ? 1000 : 500}
+                        duration={windowWidth > 760 ? 1000 : 500}
                         damping={1}
                         delay={windowWidth > 760 ? 1000 : 0}
                         triggerOnce={true}
@@ -36,7 +36,8 @@ const HomePage: React.FC<TPageProps> = (props) => {
                         delay={windowWidth > 760 ? 4000 : 1500}
                         triggerOnce={true}
                         style={{margin: "60px 0 0 0"}
-                    }>
+                        }
+                    >
                         <Button
                             href={`#${SECTIONS[3]}`}
                             label={"Get in touch"}

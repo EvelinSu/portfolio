@@ -13,13 +13,12 @@ const SendEmail = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const sendEmail = (values: LoginRequest) => {
-        return emailJs.send("service_3wgjpxg", "template_vrwsfiq", values, "qwhCDsAlkYX2EAa_o")
-    }
-
-    type LoginRequest = {
-        name: string;
-        email: string;
-        message: string;
+        return emailJs.send(
+            "service_3wgjpxg",
+            "template_vrwsfiq",
+            values,
+            "qwhCDsAlkYX2EAa_o"
+        )
     }
 
     const {
@@ -110,11 +109,17 @@ const SendEmail = () => {
                     className={`${s.button} ${isLoading && s.buttonLoading}`}
                     label={"Send"}
                     disabled={!isValid}
-                    icon={<SendMessageIcon/>}
+                    icon={<SendMessageIcon />}
                 />
             </div>
         </form>
     );
 };
+
+type LoginRequest = {
+    name: string;
+    email: string;
+    message: string;
+}
 
 export default SendEmail;

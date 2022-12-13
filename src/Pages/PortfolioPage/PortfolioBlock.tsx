@@ -7,6 +7,7 @@ type TypePortfolioBlockProps = {
     description: string,
     image: string
     demo?: string
+    link?: string
     postscript?: string
 }
 
@@ -14,13 +15,18 @@ const PortfolioBlock: React.FC<TypePortfolioBlockProps> = (props) => {
     return (
         <div className={s.blockContainer}>
             <div className={s.body}>
-                <a className={s.imageContainer} href={props.image} target={"_blank"}>
+                <a className={s.imageContainer} href={props.link} target={"_blank"}>
                     <img className={s.image} src={props.image} alt={'ava'}/>
                 </a>
 
                 {props.demo && (
                     <div className={s.shadow}>
-                        <Button target="_blank" href={props.demo} className={s.button} label={"Demo"}/>
+                        <Button
+                            target="_blank"
+                            href={props.demo}
+                            className={s.button}
+                            label={"Demo"}
+                        />
                     </div>
                 )}
 

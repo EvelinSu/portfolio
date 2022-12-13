@@ -12,13 +12,13 @@ export function ParticlesContainer(props: unknown) {
 
     const windowWidth = window.innerWidth
 
-    const options={
+    const options = {
         "particles": {
             "number": {
                 "value": windowWidth < 1000 ? 15 : 50,
-                    "density": {
+                "density": {
                     "enable": false,
-                        "value_area": 800
+                    "value_area": 800
                 }
             },
             "color": {
@@ -26,58 +26,53 @@ export function ParticlesContainer(props: unknown) {
             },
             "shape": {
                 "type": "star",
-                    "options": {
-                    "sides": 5
-                }
             },
             "opacity": {
                 "value": 1,
-                    "random": true,
-                    "anim": {
+                "random": true,
+                "anim": {
                     "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0.7,
-                        "sync": false
+                    "speed": 1,
+                    "opacity_min": 0.7,
+                    "sync": false
                 }
             },
             "size": {
                 "value": 4,
-                    "random": true,
-                    "anim": {
+                "random": true,
+                "anim": {
                     "enable": true,
-                        "speed": 4,
-                        "size_min": 3,
-                        "sync": false
+                    "speed": 4,
+                    "size_min": 3,
+                    "sync": false
                 }
             },
             "rotate": {
                 "value": 0,
-                    "random": true,
-                    "direction": "clockwise",
-                    "animation": {
+                "random": true,
+                "direction": "clockwise",
+                "animation": {
                     "enable": true,
-                        "speed": 5,
-                        "sync": false
+                    "speed": 5,
+                    "sync": false
                 }
             },
             "line_linked": {
-                "enable":  true,
-                    "distance": windowWidth > 800 ? 180 : 100,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 2
+                "enable": true,
+                "distance": windowWidth > 800 ? 180 : 100,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 2
             },
             "move": {
                 "enable": true,
-                    "speed": 1,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "attract": {
+                "speed": 1,
+                "random": false,
+                "straight": false,
+                "attract": {
                     "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
+                    "rotateX": 600,
+                    "rotateY": 1200
                 }
             }
         },
@@ -85,18 +80,18 @@ export function ParticlesContainer(props: unknown) {
             "events": {
                 "onhover": {
                     "enable": windowWidth > 800,
-                        "mode": ["grab"]
+                    "mode": ["grab"]
                 },
                 "onclick": {
                     "enable": false,
-                        "mode": "bubble"
+                    "mode": "bubble"
                 },
                 "resize": true
             },
             "modes": {
                 "grab": {
                     "distance": 200,
-                        "line_linked": {
+                    "line_linked": {
                         "opacity": 1
                     }
                 },
@@ -112,13 +107,12 @@ export function ParticlesContainer(props: unknown) {
             }
         },
         "retina_detect": true,
-            "background": {
-                "image": "",
-                "position": "50% 50%",
-                "repeat": "no-repeat",
+        "background": {
+            "image": "",
+            "position": "50% 50%",
+            "repeat": "no-repeat",
         }
     }
 
-    // @ts-ignore
     return <Particles options={options} init={customInit} />;
 }

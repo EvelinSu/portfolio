@@ -1,8 +1,9 @@
 import React from "react";
-import {TPageProps} from "../../types";
+import {TPageProps} from "../types";
 import s from "./styles.module.sass"
 import PortfolioBlock from "./PortfolioBlock";
 import {Slide} from "react-awesome-reveal";
+import {works} from "./skills";
 
 const PortfolioPage: React.FC<TPageProps> = (props) => {
 
@@ -27,6 +28,7 @@ const PortfolioPage: React.FC<TPageProps> = (props) => {
                             demo={el.demo}
                             description={el.description}
                             image={el.image}
+                            link={el.link}
                             postscript={el.postscript}
                         />
                     </Slide>
@@ -34,38 +36,7 @@ const PortfolioPage: React.FC<TPageProps> = (props) => {
             </div>
         </section>
     )
-        ;
 };
 
 export default PortfolioPage;
 
-const works = [
-    {
-        title: 'Learning by cards',
-        image: "https://i.imgur.com/pZq5sBS.jpg",
-        description: 'Applications for learning by cards. Stack: React, Redux, TypeScript, Styled-components,' +
-            ' Redux-toolkit, Redux Thunk, Axios, React Router DOM v6, REST API, Formik + Yup',
-        demo: 'https://evelinsu.github.io/friday-project/#/',
-        code: 'https://github.com/EvelinSu/friday-project',
-        postscript: ""
-    },
-    {
-        title: 'Social network',
-        image: "https://i.imgur.com/yD4adaM.png",
-        description: 'This is my research project, sharpening skills. Stack: React, Redux, TypeScript,' +
-            ' Styled-components, Redux-toolkit, Redux Thunk, Axios, React Router DOM, Formik + Yup, REST API, Jest',
-        demo: 'https://evelinsu.github.io/social-network/#/',
-        code: 'https://github.com/EvelinSu/social-network',
-        postscript: "in progress"
-    },
-
-    {
-        title: 'Corporate application',
-        image: "https://i.imgur.com/VRGpGnW.jpg",
-        description: 'A corporate application for tracking sensor readings, tracking employee tasks (like in Jira), ' +
-            'storing data about orders, about completed tasks',
-        demo: '',
-        code: '',
-        postscript: ''
-    },
-]
