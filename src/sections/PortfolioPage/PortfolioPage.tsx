@@ -1,9 +1,9 @@
 import React from "react";
-import {TPageProps} from "../types";
 import s from "./styles.module.sass"
 import PortfolioBlock from "./PortfolioBlock";
 import {Slide} from "react-awesome-reveal";
-import {works} from "./skills";
+import {works} from "./works";
+import {TPageProps} from "../types";
 
 const PortfolioPage: React.FC<TPageProps> = (props) => {
 

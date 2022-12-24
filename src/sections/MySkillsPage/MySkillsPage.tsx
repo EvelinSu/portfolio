@@ -27,7 +27,7 @@ const MySkillsPage: React.FC<TPageProps> = (props) => {
             </div>
             <div className={s.text}>
                 For styling, I can work with both <span>CSS</span> and <span>SASS</span> (with <span>BEM</span>).
-                For the React I prefer use <span>styled-components</span>, but I can also
+                For the React I prefer to use <span>styled-components</span>, but I can also
                 work with <span>CSS-modules</span>.
             </div>
         </section>
