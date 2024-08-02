@@ -1,0 +1,27 @@
+.root
+  display: flex
+  flex-direction: row
+  width: 100%
+  color: var(--textOnPrimary)
+  font-weight: 300
+  max-height: 100vh
+  @media all and (max-width: 760px)
+    flex-direction: column
+    max-height: initial
+
+.sections
+  //
+  //@media all and (max-width: 760px)
+  //  padding: 40px 20px 60px 20px
+
+  max-height: 100%
+  overflow: auto
+  width: 100%
+  padding: 10px 10px 0 0
+
+  @media all and (max-width: 760px)
+    overflow: initial
+    padding-left: 10px
+
+  @media all and (max-width: 460px)
+    padding: 0

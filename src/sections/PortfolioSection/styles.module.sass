@@ -1,0 +1,116 @@
+@import "@/styles/mixins"
+
+.flex
+  @include flex(column)
+  gap: 50px
+  width: 100%
+  max-width: 900px
+
+  @media all and (max-width: 1050px)
+    gap: 20px
+
+
+.blockContainer
+  @include flex(row, center)
+  @include gap(50px)
+  z-index: 1
+  position: relative
+  flex-direction: inherit
+  margin-top: auto
+  padding-bottom: 60px
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1)
+
+  &:hover
+    .shadow
+      opacity: 1
+
+@media all and (max-width: 1050px)
+  .blockContainer, .blockContainer:nth-child(2n)
+    flex-direction: column-reverse
+    gap: 20px
+  .blockContainer:first-child:after
+    content: none
+
+.body
+  @include flex(column, center)
+  @include gap(20px)
+  border-radius: 20px
+  position: relative
+  min-width: 320px
+  max-width: 400px
+  box-shadow: 20px 20px 0 0 var(--primaryDarker)
+
+  img
+    z-index: -1
+
+  @media all and (max-width: 1050px)
+    max-width: 100%
+
+.shadow
+  @include flex(row, center)
+  justify-content: center
+  height: 100%
+  width: 100%
+  position: absolute
+  background-color: rgba(30, 68, 105, 0.6)
+  border-radius: inherit
+  opacity: 0
+  backdrop-filter: blur(2px)
+  -webkit-backdrop-filter: blur(2px)
+  transition: 0.5s
+
+.title
+  font-size: 26px
+  font-weight: 500
+
+  span
+    font-size: 14px
+    font-weight: 100
+    opacity: 0.4
+
+.description
+  min-width: 250px
+  width: 100%
+
+.image
+  object-fit: cover
+  width: 100%
+  height: 200px
+  border-radius: 20px
+
+.imageContainer
+  display: flex
+  width: 100%
+  height: 100%
+
+.button
+  backdrop-filter: none
+  font-size: 20px
+  padding: 10px 25px
+  border-width: 3px
+  background-color: var(--primary)
+  border-color: transparent
+  color: rgba(255, 255, 255, 0.7)
+
+@media all and (max-width: 1050px)
+  .content
+    padding: 40px 0
+
+
+.list
+  display: flex
+  flex-wrap: wrap
+  column-gap: 20px
+  row-gap: 15px
+  opacity: 0.6
+
+  div:last-child
+    display: none
+
+  &__item
+    padding: 0
+    margin: 0
+
+
+    &:first-child
+      padding-left: 0

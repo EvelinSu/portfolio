@@ -1,0 +1,38 @@
+@import "@/styles/mixins"
+
+.block
+  background-image: url('https://i.imgur.com/tgGUO8v.png')
+  background-position: 150px center
+  background-size: cover
+  background-repeat: no-repeat
+  background-attachment: fixed
+  font-size: 32px
+  @media all and (max-width: 760px)
+    background-position: center
+
+.shadow
+  @include flex(row, center)
+  justify-content: center
+  min-height: 100%
+  width: 100%
+  background-color: rgba(0, 0, 0, 0.8)
+  backdrop-filter: blur(3px)
+  -webkit-backdrop-filter: blur(3px)
+  padding: 40px 40px
+  @media all and (max-width: 760px)
+    padding: 20px
+
+.title
+  @include flex(column, center)
+  margin: 0
+  padding: 40px 0
+  border-top: 6px dashed rgba(255, 255, 255, 0.1)
+  border-bottom: 6px dashed rgba(255, 255, 255, 0.1)
+  width: 100%
+
+  &:after
+    content: none
+
+  @media all and (max-width: 760px)
+    padding: 20px 0
+    font-size: 22px
