@@ -61,7 +61,7 @@ export const works: TypePortfolioBlockProps[] = [
     description:
       "Это было тестовое задание в одну из компаний, но мне понравилась задумка. Чат " +
       "для одиноких людей, в котором ты можешь общаться сам с собой, открыв несколько вкладок. Данные между вкладками передаются через local storage ",
-    demo: "evelinsu.github.io/chat-for-alone-people/",
+    demo: "https://evelinsu.github.io/chat-for-alone-people/",
     postscript: "",
     technologies: ["React", "Typescript", "Styled-components", "Local storage"],
   },
